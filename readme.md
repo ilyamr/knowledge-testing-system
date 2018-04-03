@@ -1,20 +1,23 @@
-Онлайн-система для оценки знаний. Описание используемых технологий и развертывания.
+System for knowledge testing. Theory, tests, practical exercises. 
+Examples for cryptography course, but can be used in any discipline.
 
-## Tech & frameworks: 
-php 5.6, laravel 5.2, mysql, apache2
+Laravel, React & MySQL
 
-## Required libs & packages: 
-php5-gmp, php5-mcrypt, composer
+## pre-requisites 
+Create local .env file with your own DB params 
 
-## Deployment.
+## install
 
-1. Создать таблицу "study" (например) в mysql
-2. Скопировать файл .env из env.example и указать имя таблицы, хост и логин\пароль от БД
-3. In project root(linux shell): 
+`composer install`
+`npm install`
 
-"composer install"
-"php artisan key:generate"
-"mysql -p study -u root < database/study.sql" //миграция БД. study.sql - дамп БД - не нужноо мигрировать через стандартный artisan migrate + есть начальные данные и примеры тестов
+### Databese migration
+1. Create database 'study' in your mysql server
+2. Migrate DB from a dump (in project root):
+`mysql -p study -u root < database/study.sql`
 
-## Запуск
-php artisan serve --port=8080 //Запуск проекта на dev-сервере
+## generating laravel key
+`php artisan key:generate`
+
+## run
+`./artisan composer serve`
