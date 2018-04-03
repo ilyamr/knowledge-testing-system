@@ -1,0 +1,179 @@
+@b: #161616;
+
+@p: #217ed1;
+@dp: #185b96;
+
+@font-size: 14px;
+
+body, html {
+    color: @b;
+}
+
+p {
+    line-height: 1.8;
+    margin: 0 0 1.4em 0!important;
+}
+
+.theory {
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    margin: 0 0 2em 0;
+    padding: 1em 0;
+}
+.showTheory {
+    display: inline-block;
+    font-size: .9em;
+    color: #6d6d6d;
+    font-style: italic;
+    margin-bottom: 2em;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+.practice {
+    margin: 1em 0;
+    padding: 1em;
+
+    &-error {
+        border-left: 5px solid #e8005a;
+    }
+
+    &-success {
+        border-left: 5px solid #2cb861;
+    }
+}
+
+header {
+    padding: 2em;
+    border-bottom: 1px solid #e8e8e8;
+
+    .logo {
+        font-size: 1.2em;
+    }
+}
+
+.menu {
+    border-right: 1px solid #ededed;
+
+    ul {
+        padding: 1em;
+        list-style: none;
+        margin: 0;
+
+        li {
+            margin-bottom: 2em;
+
+            ul {
+                padding: 0;
+                border-top: 1px dashed #d8d8d8;
+                margin-top: 8px;
+                padding-top: 8px;
+
+                li {
+                    font-size: @font-size !important;
+
+                    a {
+                        color: @p;
+
+                        &:hover {
+                            text-decoration: none;
+                            color: @dp;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:first-child {
+            li {
+                font-size: 1.2em;
+            }
+        }
+    }
+
+}
+
+.content {
+    padding: 1em;
+
+    h1 {
+        margin: 0 0 1em 0;
+        padding: 0;
+    }
+
+    .page {
+        margin-top: .3em;
+        padding: 0 2em;
+    }
+}
+
+.actions {
+    text-align: right;
+}
+
+ul.dots {
+    margin: 0 0 2em 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        border-radius: 10px;
+        border: 1px solid @dp;
+        margin-right: 10px;
+
+        &.done {
+            background-color: @p;
+        }
+
+        &.in-progress {
+            border: 3px solid @p;
+        }
+    }
+}
+
+.question {
+    font-size: 1.4em;
+    line-height: 1.4;
+    margin-bottom: .9em;
+}
+
+.form {
+    label {
+        display: block;
+        margin-bottom: .5em;
+        font-weight: 400;
+    }
+
+    .submit {
+        margin-top: 2em;
+    }
+}
+
+ul.results {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        margin-bottom: 1.5em;
+        border-left: 5px solid #fff;
+        padding-left: .85em;
+
+        .answer {
+            margin-top: .5em;
+            font-style: italic;
+            color: #747474;
+        }
+    }
+    .right {
+        border-left: 5px solid #55c672;
+    }
+    .wrong {
+        border-left: 5px solid #c6332b;
+    }
+}
